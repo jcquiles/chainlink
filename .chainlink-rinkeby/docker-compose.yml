@@ -5,6 +5,8 @@ services:
       - "5432:5432"
     volumes:
       - /Users/jerryc.quiles/desktop/github/chainlink/.chainlink-rinkeby/data:/var/lib/postgressql/data/
+    env_file:
+      - database.env
   chainlink:
     image: "smartcontract/chainlink:1.3.0"
     env_file:
