@@ -4,7 +4,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - /Users/jerryc.quiles/desktop/github/chainlink/.chainlink-rinkeby/data:/var/lib/postgressql/data/
+      - /Users/christopher.quiles/desktop/github/chainlink/.chainlink-rinkeby/data:/var/lib/postgressql/data/
     env_file:
       - database.env
   chainlink:
@@ -16,5 +16,5 @@ services:
     ports:
       - "6688:6688"
     volumes:
-      - /Users/jerryc.quiles/desktop/github/chainlink/.chainlink-rinkeby/chainlink-volume:/chainlink/
+      - /Users/christopher.quiles/desktop/github/chainlink/.chainlink-rinkeby/chainlink-volume:/chainlink/
     command: node start --password /chainlink/password.txt --api /chainlink/apicredentials.txt   
